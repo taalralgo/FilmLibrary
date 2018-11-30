@@ -29,7 +29,15 @@ namespace FilmLibrary.Services_Interfaces
 
         public Actor Find(int acteurId)
         {
-            return db.Actors.Where(acteur => acteur.ActeurId.Equals(acteurId)).FirstOrDefault();
+            try
+            {
+                return db.Actors.Where(acteur => acteur.ActeurId.Equals(acteurId)).FirstOrDefault();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public List<Actor> FindAll()
@@ -40,13 +48,21 @@ namespace FilmLibrary.Services_Interfaces
 
         public int Modifier(int acteur_id,string nom,string prenom = null)
         {
-            Actor tampon = new Actor();
-            tampon = db.Actors.Find(acteur_id);
-            tampon.ActeurNom = nom;
-            if(prenom != null)
-                tampon.ActeurPrenom = prenom;
+            try
+            {
+                Actor tampon = new Actor();
+                tampon = db.Actors.Find(acteur_id);
+                tampon.ActeurNom = nom;
+                if (prenom != null)
+                    tampon.ActeurPrenom = prenom;
 
-            return db.SaveChanges();
+                return db.SaveChanges();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
 
         }
     }

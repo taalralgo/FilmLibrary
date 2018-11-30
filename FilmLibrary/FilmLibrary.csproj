@@ -69,7 +69,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service1.cs" />
     <Compile Include="Services_Interfaces\ActorService.cs" />
+    <Compile Include="Services_Interfaces\AdresseService.cs" />
+    <Compile Include="Services_Interfaces\CategoryService.cs" />
+    <Compile Include="Services_Interfaces\CityService.cs" />
+    <Compile Include="Services_Interfaces\CountryService.cs" />
     <Compile Include="Services_Interfaces\IActorService.cs" />
+    <Compile Include="Services_Interfaces\IAdresseService.cs" />
+    <Compile Include="Services_Interfaces\ICategoryService.cs" />
+    <Compile Include="Services_Interfaces\ICityService.cs" />
+    <Compile Include="Services_Interfaces\ICountryService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -16,32 +16,32 @@ namespace FilmLibrary
 
         public DbSet<Category> Categories { get; set; }
 
-        public DbSet<Actor> Cities { get; set; }
+        public DbSet<City> Cities { get; set; }
 
-        public DbSet<Actor> Countries { get; set; }
-
-
-        public DbSet<Actor> Customers { get; set; }
+        public DbSet<Country> Countries { get; set; }
 
 
-        public DbSet<Actor> Films { get; set; }
+        public DbSet<Customer> Customers { get; set; }
 
 
-        public DbSet<Actor> Inventories { get; set; }
+        public DbSet<Film> Films { get; set; }
 
 
-        public DbSet<Actor> Languages { get; set; }
+        public DbSet<Inventory> Inventories { get; set; }
 
 
-        public DbSet<Actor> Payments { get; set; }
+        public DbSet<Language> Languages { get; set; }
 
 
-        public DbSet<Actor> Rentals { get; set; }
+        public DbSet<Payment> Payments { get; set; }
 
 
-        public DbSet<Actor> Staffs { get; set; }
+        public DbSet<Rental> Rentals { get; set; }
 
-        public DbSet<Actor> Stores { get; set; }
+
+        public DbSet<Staff> Staffs { get; set; }
+
+        public DbSet<Store> Stores { get; set; }
 
         public DBContext() : base("FilmLibrary")
         {
