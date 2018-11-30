@@ -17,22 +17,25 @@ namespace FilmLibrary.Les_Modeles
         public string FilmTitle { get; set; }
 
         [DataMember]
-        public string Description { get; set; }
+        public string FilmDescription { get; set; }
 
         [DataMember]
-        public int Release_year { get; set; }
+        public DateTime FilmRelease_year { get; set; }
 
         [DataMember]
-        public int Rental_duration { get; set; }
+        public int FilmRental_duration { get; set; }
 
         [DataMember]
-        public int Rental_rate { get; set; }
+        public int FilmRental_rate { get; set; }
 
         [DataMember]
-        public int Lenght { get; set; }
+        public int FilmLenght { get; set; }
 
         [DataMember]
-        public int Rental { get; set; }
+        public int FilmRental { get; set; }
+
+        [DataMember]
+        public Language FilmLanguage { get; set; }
 
         [DataMember]
         public ICollection<Store> Stores { get; set; }

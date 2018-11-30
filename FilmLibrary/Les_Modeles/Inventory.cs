@@ -8,18 +8,15 @@ using System.Threading.Tasks;
 namespace FilmLibrary.Les_Modeles
 {
     [DataContract]
-    public class Actor
+    public class Inventory
     {
         [DataMember]
-        public int ActeurId { get; set; }
+        public int InventoryId { get; set; }
 
         [DataMember]
-        public string ActeurNom { get; set; }
+        public virtual int Film_Id { get; set; }
 
         [DataMember]
-        public String ActeurPrenom { get; set; }
-
-        [DataMember]
-        public ICollection<Film> Films { get; set; }
+        public virtual int Store_Id { get; set; }
     }
 }

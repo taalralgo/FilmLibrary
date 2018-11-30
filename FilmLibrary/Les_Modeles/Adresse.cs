@@ -14,12 +14,24 @@ namespace FilmLibrary.Les_Modeles
         public int AdresseId { get; set; }
 
         [DataMember]
-        public String adresse { get; set; }
+        public String AdresseNom { get; set; }
 
         [DataMember]
-        public String phone { get; set; }
+        public String Phone { get; set; }
+
+        [DataMember]
+        public String District { get; set; }
+
+        [DataMember]
+        public City CityId { get; set; }
 
         [DataMember]
         public ICollection<Store> Stores { get; set; }
+
+        [DataMember]
+        public ICollection<Customer> Clients { get; set; }
+
+        [DataMember]
+        public ICollection<Staff> Staffs { get; set; }
     }
 }

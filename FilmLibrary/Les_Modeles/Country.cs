@@ -10,5 +10,13 @@ namespace FilmLibrary.Les_Modeles
     [DataContract]
     public class Country
     {
+        [DataMember]
+        public int CountryId { get; set; }
+
+        [DataMember]
+        public string CountryNom { get; set; }
+
+        [DataMember]
+        public ICollection<City> Cities { get; set; }
     }
 }

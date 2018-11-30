@@ -10,5 +10,13 @@ namespace FilmLibrary.Les_Modeles
     [DataContract]
     public class Language
     {
+        [DataMember]
+        public int LanguageId { get; set; }
+
+        [DataMember]
+        public string LanguageName { get; set; }
+
+        [DataMember]
+        public ICollection<Film> Films { get; set; }
     }
 }

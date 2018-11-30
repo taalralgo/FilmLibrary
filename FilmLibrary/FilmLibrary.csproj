@@ -51,6 +51,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBContext.cs" />
     <Compile Include="IService1.cs" />
     <Compile Include="Les_Modeles\Actor.cs" />
     <Compile Include="Les_Modeles\Adresse.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="Les_Modeles\Country.cs" />
     <Compile Include="Les_Modeles\Customer.cs" />
     <Compile Include="Les_Modeles\Film.cs" />
+    <Compile Include="Les_Modeles\Inventory.cs" />
     <Compile Include="Les_Modeles\Language.cs" />
     <Compile Include="Les_Modeles\Payment.cs" />
     <Compile Include="Les_Modeles\Rental.cs" />
@@ -66,6 +68,8 @@
     <Compile Include="Les_Modeles\Store.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service1.cs" />
+    <Compile Include="Services_Interfaces\ActorService.cs" />
+    <Compile Include="Services_Interfaces\IActorService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
