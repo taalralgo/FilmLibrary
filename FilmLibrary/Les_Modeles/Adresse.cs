@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -14,12 +16,18 @@ namespace FilmLibrary.Les_Modeles
         public int AdresseId { get; set; }
 
         [DataMember]
+        [Column(TypeName = "VARCHAR")]
+        [StringLength(50)]
         public String AdresseNom { get; set; }
 
         [DataMember]
+        [Column(TypeName = "VARCHAR")]
+        [StringLength(20)]
         public String Phone { get; set; }
 
         [DataMember]
+        [Column(TypeName = "VARCHAR")]
+        [StringLength(20)]
         public String District { get; set; }
 
         [DataMember]

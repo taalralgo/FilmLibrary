@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -14,9 +16,12 @@ namespace FilmLibrary.Les_Modeles
         public int FilmId { get; set; }
 
         [DataMember]
+        [Column(TypeName = "VARCHAR")]
+        [StringLength(255)]
         public string FilmTitle { get; set; }
 
         [DataMember]
+        [Column(TypeName = "TEXT")]
         public string FilmDescription { get; set; }
 
         [DataMember]
