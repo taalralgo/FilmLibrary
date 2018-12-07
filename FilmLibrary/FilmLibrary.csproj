@@ -87,9 +87,13 @@
     <Compile Include="Services_Interfaces\InventoryService.cs" />
     <Compile Include="Services_Interfaces\IPaymentServce.cs" />
     <Compile Include="Services_Interfaces\IRentalService.cs" />
+    <Compile Include="Services_Interfaces\IStaffServce.cs" />
+    <Compile Include="Services_Interfaces\IStoreService.cs" />
     <Compile Include="Services_Interfaces\LanguageService.cs" />
     <Compile Include="Services_Interfaces\PaymentServce.cs" />
     <Compile Include="Services_Interfaces\RentalService.cs" />
+    <Compile Include="Services_Interfaces\StaffServce.cs" />
+    <Compile Include="Services_Interfaces\StoreService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

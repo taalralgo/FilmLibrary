@@ -21,6 +21,16 @@ namespace FilmLibrary.Les_Modeles
         public string StaffPrenom { get; set; }
 
         [DataMember]
+        [Column(TypeName = "VARCHAR")]
+        [StringLength(45)]
+        public string StaffNom { get; set; }
+
+        [DataMember]
+        [Column(TypeName = "VARCHAR")]
+        [StringLength(45)]
+        public string StaffRole { get; set; }
+
+        [DataMember]
         public byte[] StaffPicture { get; set; }
 
         [DataMember]
@@ -43,6 +53,9 @@ namespace FilmLibrary.Les_Modeles
 
         [DataMember]
         public Adresse StaffAdresse { get; set; }
+
+        [DataMember]
+        public Store StaffStore { get; set; }
 
         [DataMember]
         public ICollection<Payment> Payments { get; set; }
