@@ -13,28 +13,28 @@ namespace FilmLibrary.Les_Modeles
     public class Customer
     {
         [DataMember]
-        public int ClientId { get; set; }
+        public int CustomerId { get; set; }
 
         [DataMember]
         [Column(TypeName = "VARCHAR")]
         [StringLength(45)]
-        public String ClientNom { get; set; }
+        public String CustomerNom { get; set; }
 
         [DataMember]
         [Column(TypeName = "VARCHAR")]
         [StringLength(45)]
-        public String ClientPrenom { get; set; }
+        public String CustomerPrenom { get; set; }
 
         [DataMember]
         [Column(TypeName = "VARCHAR")]
         [StringLength(50)]
-        public String ClientEmail { get; set; }
+        public String CustomerEmail { get; set; }
 
         [DataMember]
-        public byte[] ClientPicture { get; set; }
+        public byte[] CustomerPicture { get; set; }
 
         [DataMember]
-        public bool ClientActive { get; set; }
+        public bool CustomerActive { get; set; }
 
         [DataMember]
         public Store StoreId { get; set; }

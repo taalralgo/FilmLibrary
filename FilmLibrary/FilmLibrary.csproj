@@ -73,11 +73,23 @@
     <Compile Include="Services_Interfaces\CategoryService.cs" />
     <Compile Include="Services_Interfaces\CityService.cs" />
     <Compile Include="Services_Interfaces\CountryService.cs" />
+    <Compile Include="Services_Interfaces\CustomerService.cs" />
+    <Compile Include="Services_Interfaces\FilmService.cs" />
     <Compile Include="Services_Interfaces\IActorService.cs" />
     <Compile Include="Services_Interfaces\IAdresseService.cs" />
     <Compile Include="Services_Interfaces\ICategoryService.cs" />
     <Compile Include="Services_Interfaces\ICityService.cs" />
     <Compile Include="Services_Interfaces\ICountryService.cs" />
+    <Compile Include="Services_Interfaces\ICustomerService.cs" />
+    <Compile Include="Services_Interfaces\IFilmService.cs" />
+    <Compile Include="Services_Interfaces\IInventoryService.cs" />
+    <Compile Include="Services_Interfaces\ILanguageService.cs" />
+    <Compile Include="Services_Interfaces\InventoryService.cs" />
+    <Compile Include="Services_Interfaces\IPaymentServce.cs" />
+    <Compile Include="Services_Interfaces\IRentalService.cs" />
+    <Compile Include="Services_Interfaces\LanguageService.cs" />
+    <Compile Include="Services_Interfaces\PaymentServce.cs" />
+    <Compile Include="Services_Interfaces\RentalService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
