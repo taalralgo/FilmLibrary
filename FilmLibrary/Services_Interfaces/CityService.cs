@@ -12,18 +12,19 @@ namespace FilmLibrary.Services_Interfaces
     public class CityService : ICityService
     {
         DBContext db = new DBContext();
-        public int Add(City city)
+        public City Add(City city)
         {
             try
             {
                 db.Cities.Add(city);
-                return db.SaveChanges();
+               db.SaveChanges();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                Console.WriteLine(ex.Message);
             }
+            return city;
         }
 
         public City Find(int cityId)

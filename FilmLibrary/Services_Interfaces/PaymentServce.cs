@@ -12,18 +12,19 @@ namespace FilmLibrary.Services_Interfaces
     public class PaymentServce : IPaymentServce
     {
         DBContext db = new DBContext();
-        public int Add(Payment payment)
+        public Payment Add(Payment payment)
         {
             try
             {
                 db.Payments.Add(payment);
-                return db.SaveChanges();
+                db.SaveChanges();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                Console.WriteLine(ex.Message);
             }
+            return payment;
         }
 
         public Payment Find(int id)
@@ -52,13 +53,13 @@ namespace FilmLibrary.Services_Interfaces
             }
         }
 
-        public int Modifier(int id, int montant, int customerid)
+        public int Modifier(int id, int montant, Customer customer)
         {
             try
             {
                 Payment payment = new Payment();
                 payment.PaymentAmount = montant;
-                payment.CustomerId = customerid;
+                payment.CustomerId = customer;
                 return db.SaveChanges();
             }
             catch (Exception)

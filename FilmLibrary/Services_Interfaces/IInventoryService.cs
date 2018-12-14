@@ -13,7 +13,7 @@ namespace FilmLibrary.Services_Interfaces
     public interface IInventoryService
     {
         [OperationContract]
-        int Add(Inventory inventaire);
+        Inventory Add(Inventory inventaire);
 
         [OperationContract]
         List<Inventory> FindAll();
@@ -22,10 +22,10 @@ namespace FilmLibrary.Services_Interfaces
         Inventory Find(int id);
         //Trouver tous les nventaires d'un film
         [OperationContract]
-        List<Inventory> Find(Film film);
+        List<Inventory> FindInventaireFilm(Film film);
 
         //Trouver tous les inventaires d'un store
         [OperationContract]
-        List<Inventory> Find(Store store);
+        List<Inventory> FindInventaireStore(Store store);
     }
 }

@@ -13,7 +13,7 @@ namespace FilmLibrary.Services_Interfaces
     public interface ICityService
     {
         [OperationContract]
-        int Add(City city);
+        City Add(City city);
 
         [OperationContract]
         int Modifier(int cityId, string cityNom);

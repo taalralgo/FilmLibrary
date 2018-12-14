@@ -13,7 +13,7 @@ namespace FilmLibrary.Services_Interfaces
     public interface ILanguageService
     {
         [OperationContract]
-        int Add(Language language);
+        Language Add(Language language);
 
         [OperationContract]
         int Modifier(int id, string nom);

@@ -12,18 +12,19 @@ namespace FilmLibrary.Services_Interfaces
     public class CustomerService : ICustomerService
     {
         DBContext db = new DBContext();
-        public int Add(Customer client)
+        public Customer Add(Customer client)
         {
             try
             {
                 db.Customers.Add(client);
-                return db.SaveChanges();
+                db.SaveChanges();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                Console.WriteLine(ex.Message);
             }
+            return client;
         }
 
         public Customer Find(int clientId)

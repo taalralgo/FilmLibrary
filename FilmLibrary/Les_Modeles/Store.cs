@@ -14,10 +14,10 @@ namespace FilmLibrary.Les_Modeles
         public int StoreId { get; set; }
 
         [DataMember]
-        public Staff StaffManager { get; set; }
+        public Staff StaffId { get; set; }
 
         [DataMember]
-        public Adresse StoreAdresse { get; set; }
+        public Adresse AdresseId { get; set; }
 
         [DataMember]
         public ICollection<Film> Films { get; set; }

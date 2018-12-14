@@ -12,18 +12,19 @@ namespace FilmLibrary.Services_Interfaces
     public class CountryService : ICountryService
     {
         DBContext db = new DBContext();
-        public int Add(Country country)
+        public Country Add(Country country)
         {
             try
             {
                 db.Countries.Add(country);
-                return db.SaveChanges();
+                db.SaveChanges();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                Console.WriteLine(ex.Message);
             }
+            return country;
         }
 
         public List<Country> FindAll()

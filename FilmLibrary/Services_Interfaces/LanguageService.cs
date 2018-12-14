@@ -12,18 +12,19 @@ namespace FilmLibrary.Services_Interfaces
     public class LanguageService : ILanguageService
     {
         DBContext db = new DBContext();
-        public int Add(Language language)
+        public Language Add(Language language)
         {
             try
             {
                 db.Languages.Add(language);
-                return db.SaveChanges();
+                db.SaveChanges();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                Console.WriteLine(ex.Message);
             }
+            return language;
         }
 
         public int Modifier(int id, string nom)

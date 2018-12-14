@@ -43,7 +43,7 @@ namespace FilmLibrary
 
         public DbSet<Store> Stores { get; set; }
 
-        public DBContext() : base("FilmLibrary")
+        public DBContext() : base("name=FilmLibrary")
         {
             Database.SetInitializer<DBContext>(new DropCreateDatabaseIfModelChanges<DBContext>());
         }

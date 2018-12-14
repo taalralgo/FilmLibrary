@@ -13,7 +13,7 @@ namespace FilmLibrary.Les_Modeles
     public class Staff
     {
         [DataMember]
-        public String StaffId { get; set; }
+        public int StaffId { get; set; }
 
         [DataMember]
         [Column(TypeName = "VARCHAR")]
@@ -55,7 +55,7 @@ namespace FilmLibrary.Les_Modeles
         public Adresse StaffAdresse { get; set; }
 
         [DataMember]
-        public Store StaffStore { get; set; }
+        public Store StoreId { get; set; }
 
         [DataMember]
         public ICollection<Payment> Payments { get; set; }

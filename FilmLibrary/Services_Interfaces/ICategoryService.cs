@@ -13,7 +13,7 @@ namespace FilmLibrary.Services_Interfaces
     public interface ICategoryService
     {
         [OperationContract]
-        int Add(Category categorie);
+        Category Add(Category categorie);
 
         [OperationContract]
         Category Find(int categoryId);

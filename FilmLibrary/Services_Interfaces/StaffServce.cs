@@ -12,18 +12,19 @@ namespace FilmLibrary.Services_Interfaces
     public class StaffServce : IStaffServce
     {
         DBContext db = new DBContext();
-        public int Add(Staff staff)
+        public Staff Add(Staff staff)
         {
             try
             {
                 db.Staffs.Add(staff);
-                return db.SaveChanges();
+                db.SaveChanges();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                Console.WriteLine(ex.Message);
             }
+            return staff;
         }
 
         public Staff Find(int id)
@@ -59,7 +60,7 @@ namespace FilmLibrary.Services_Interfaces
                 Staff staff = new Staff();
                 staff.StaffAdresse = adresse;
                 staff.StaffPicture = photo;
-                staff.StaffStore = store;
+                staff.StoreId = store;
                 staff.StaffActive = etat;
                 staff.StaffNom = nom;
                 staff.StaffPrenom = prenom;

@@ -13,7 +13,7 @@ namespace FilmLibrary.Services_Interfaces
     public interface IAdresseService
     {
         [OperationContract]
-        int Add(Adresse adresse);
+        Adresse Add(Adresse adresse);
 
         [OperationContract]
         List<Adresse> FindAll();
@@ -22,7 +22,7 @@ namespace FilmLibrary.Services_Interfaces
         Adresse Find(int adresseId);
 
         [OperationContract]
-        int Modifier(int AdresseId);
+        int Modifier(int AdresseId, string adresseNom);
 
 
     }

@@ -12,18 +12,19 @@ namespace FilmLibrary.Services_Interfaces
     public class InventoryService : IInventoryService
     {
         DBContext db = new DBContext();
-        public int Add(Inventory inventaire)
+        public Inventory Add(Inventory inventaire)
         {
             try
             {
                 db.Inventories.Add(inventaire);
-                return db.SaveChanges();
+                db.SaveChanges();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                Console.WriteLine(ex.Message);
             }
+            return inventaire;
         }
 
         public Inventory Find(int id)
@@ -39,7 +40,7 @@ namespace FilmLibrary.Services_Interfaces
             }
         }
 
-        public List<Inventory> Find(Film film)
+        public List<Inventory> FindInventaireFilm(Film film)
         {
             try
             {
@@ -52,7 +53,7 @@ namespace FilmLibrary.Services_Interfaces
             }
         }
 
-        public List<Inventory> Find(Store store)
+        public List<Inventory> FindInventaireStore(Store store)
         {
             try
             {

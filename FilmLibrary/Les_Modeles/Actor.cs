@@ -14,7 +14,7 @@ namespace FilmLibrary.Les_Modeles
     {
         [DataMember]
         
-        public int ActeurId { get; set; }
+        public int ID { get; set; }
 
         [DataMember]
         [Column(TypeName = "VARCHAR")]

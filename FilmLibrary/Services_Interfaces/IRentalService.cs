@@ -13,7 +13,7 @@ namespace FilmLibrary.Services_Interfaces
     public interface IRentalService
     {
         [OperationContract]
-        int Add(Rental rental);
+        Rental Add(Rental rental);
 
         [OperationContract]
         int Modifier(int id, DateTime dateRetour);

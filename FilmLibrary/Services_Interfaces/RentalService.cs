@@ -12,18 +12,19 @@ namespace FilmLibrary.Services_Interfaces
     public class RentalService : IRentalService
     {
         DBContext db = new DBContext();
-        public int Add(Rental rental)
+        public Rental Add(Rental rental)
         {
             try
             {
                 db.Rentals.Add(rental);
-                return db.SaveChanges();
+                db.SaveChanges();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                Console.WriteLine(ex.Message);
             }
+            return rental;
         }
 
         public Rental Find(int id)

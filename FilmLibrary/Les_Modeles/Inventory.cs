@@ -14,9 +14,9 @@ namespace FilmLibrary.Les_Modeles
         public int InventoryId { get; set; }
 
         [DataMember]
-        public virtual int FilmId { get; set; }
+        public Film FilmId { get; set; }
 
         [DataMember]
-        public virtual int StoreId { get; set; }
+        public Store StoreId { get; set; }
     }
 }

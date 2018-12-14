@@ -13,7 +13,7 @@ namespace FilmLibrary.Services_Interfaces
     public interface ICustomerService
     {
         [OperationContract]
-        int Add(Customer client);
+        Customer Add(Customer client);
 
         [OperationContract]
         int Modifier(int id, bool active, string nom = null, string prenom = null, string email = null, byte[] photo = null);
@@ -25,6 +25,6 @@ namespace FilmLibrary.Services_Interfaces
         //RETOURNER UN CLIENT
         [OperationContract]
         Customer Find(int clientId);
-
+        
     }
 }

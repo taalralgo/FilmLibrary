@@ -12,18 +12,19 @@ namespace FilmLibrary.Services_Interfaces
     public class StoreService : IStoreService
     {
         DBContext db = new DBContext();
-        public int Add(Store store)
+        public Store Add(Store store)
         {
             try
             {
                 db.Stores.Add(store);
-                return db.SaveChanges();
+                db.SaveChanges();
             }
             catch (Exception)
             {
 
                 throw;
             }
+            return store;
         }
 
         public Store Find(int id)
@@ -57,7 +58,7 @@ namespace FilmLibrary.Services_Interfaces
             try
             {
                 Store store = new Store();
-                store.StaffManager = manager;
+                store.StaffId = manager;
                 return db.SaveChanges();
             }
             catch (Exception)

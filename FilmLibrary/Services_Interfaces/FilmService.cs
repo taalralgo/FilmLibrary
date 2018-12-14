@@ -12,18 +12,19 @@ namespace FilmLibrary.Services_Interfaces
     public class FilmService : IFilmService
     {
         DBContext db = new DBContext();
-        public int Add(Film film)
+        public Film Add(Film film)
         {
             try
             {
                 db.Films.Add(film);
-                return db.SaveChanges();
+                db.SaveChanges();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                Console.WriteLine(ex.Message);
             }
+            return film;
         }
 
         public Film Find(int id)
@@ -67,7 +68,7 @@ namespace FilmLibrary.Services_Interfaces
                     if (description != null)
                         film.FilmDescription = titre;
                     if (language != null)
-                        film.FilmLanguage = language;
+                        film.LanguageId = language;
                 }
                 return db.SaveChanges();
             }

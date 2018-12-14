@@ -19,10 +19,10 @@ namespace FilmLibrary.Services_Interfaces
                 db.Actors.Add(acteur);
                 db.SaveChanges();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                Console.WriteLine(ex.Message);
             }
             return acteur;
         }
@@ -31,7 +31,7 @@ namespace FilmLibrary.Services_Interfaces
         {
             try
             {
-                return db.Actors.Where(acteur => acteur.ActeurId.Equals(acteurId)).FirstOrDefault();
+                return db.Actors.Where(acteur => acteur.ID.Equals(acteurId)).FirstOrDefault();
             }
             catch (Exception)
             {

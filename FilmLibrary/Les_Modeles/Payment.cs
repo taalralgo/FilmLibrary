@@ -20,13 +20,13 @@ namespace FilmLibrary.Les_Modeles
         public DateTime PaymentDate { get; set; }
 
         [DataMember]
-        public virtual int CustomerId { get; set; }
+        public Customer CustomerId { get; set; }
 
         [DataMember]
-        public virtual int StaffId { get; set; }
+        public Staff StaffId { get; set; }
 
         [DataMember]
-        public virtual int RentalId { get; set; }
+        public Rental RentalId { get; set; }
 
     }
 }

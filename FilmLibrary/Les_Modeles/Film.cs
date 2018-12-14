@@ -40,7 +40,7 @@ namespace FilmLibrary.Les_Modeles
         public int FilmRental { get; set; }
 
         [DataMember]
-        public Language FilmLanguage { get; set; }
+        public Language LanguageId { get; set; }
 
         [DataMember]
         public ICollection<Store> Stores { get; set; }

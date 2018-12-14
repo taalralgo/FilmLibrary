@@ -12,18 +12,19 @@ namespace FilmLibrary.Services_Interfaces
     public class AdresseService : IAdresseService
     {
         DBContext db = new DBContext();
-        public int Add(Adresse adresse)
+        public Adresse Add(Adresse adresse)
         {
             try
             {
                 db.Adresses.Add(adresse);
-                return db.SaveChanges();
+                db.SaveChanges();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                Console.WriteLine(ex.Message);
             }
+            return adresse;
         }
 
         public Adresse Find(int adresseId)

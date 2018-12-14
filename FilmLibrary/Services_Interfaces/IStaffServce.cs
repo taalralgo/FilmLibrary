@@ -13,7 +13,7 @@ namespace FilmLibrary.Services_Interfaces
     public interface IStaffServce
     {
         [OperationContract]
-        int Add(Staff staff);
+        Staff Add(Staff staff);
 
         [OperationContract]
         List<Staff> FindAll();
@@ -23,5 +23,6 @@ namespace FilmLibrary.Services_Interfaces
 
         [OperationContract]
         int Modifier(int id, Adresse adresse,byte[] photo, Store store, bool etat, string nom, string prenom, string email, string username, string password, string role);
+        
     }
 }

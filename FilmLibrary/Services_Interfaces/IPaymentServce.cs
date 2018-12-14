@@ -13,10 +13,10 @@ namespace FilmLibrary.Services_Interfaces
     public interface IPaymentServce
     {
         [OperationContract]
-        int Add(Payment payment);
+        Payment Add(Payment payment);
 
         [OperationContract]
-        int Modifier(int id, int montant, int customerid);
+        int Modifier(int id, int montant, Customer customer);
 
         [OperationContract]
         List<Payment> FindAll();

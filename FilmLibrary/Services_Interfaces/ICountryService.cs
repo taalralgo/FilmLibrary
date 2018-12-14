@@ -13,14 +13,14 @@ namespace FilmLibrary.Services_Interfaces
     public interface ICountryService
     {
         [OperationContract]
-        int Add(Country country);
+        Country Add(Country country);
 
         [OperationContract]
         int Modifier(int countryId, string countryNom);
 
         [OperationContract]
         List<Country> FindAll();
-
+        
 
     }
 }

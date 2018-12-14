@@ -13,7 +13,7 @@ namespace FilmLibrary.Services_Interfaces
     public interface IStoreService
     {
         [OperationContract]
-        int Add(Store store);
+        Store Add(Store store);
 
         [OperationContract]
         List<Store> FindAll();

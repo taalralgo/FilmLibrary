@@ -13,7 +13,7 @@ namespace FilmLibrary.Services_Interfaces
     public interface IFilmService
     {
         [OperationContract]
-        int Add(Film film);
+        Film Add(Film film);
 
         [OperationContract]
         int Modifier(int id, DateTime release_year, int length, string titre = null, string description = null, Language language = null);

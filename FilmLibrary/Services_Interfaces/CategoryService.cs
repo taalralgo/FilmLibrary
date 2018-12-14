@@ -12,18 +12,19 @@ namespace FilmLibrary.Services_Interfaces
     public class CategoryService : ICategoryService
     {
         DBContext db = new DBContext();
-        public int Add(Category categorie)
+        public Category Add(Category categorie)
         {
             try
             {
                 db.Categories.Add(categorie);
-                return db.SaveChanges();
+                db.SaveChanges();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                Console.WriteLine(ex.Message);
             }
+            return categorie;
         }
 
         public Category Find(int categoryId)
