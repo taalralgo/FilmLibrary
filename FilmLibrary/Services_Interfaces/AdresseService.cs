@@ -29,7 +29,7 @@ namespace FilmLibrary.Services_Interfaces
 
         public Adresse Find(int adresseId)
         {
-            return db.Adresses.Where(adr => adr.AdresseId.Equals(adresseId)).FirstOrDefault();
+            return db.Adresses.Where(adr => adr.ID.Equals(adresseId)).FirstOrDefault();
         }
 
         public List<Adresse> FindAll()
@@ -52,7 +52,7 @@ namespace FilmLibrary.Services_Interfaces
                 Adresse adr = new Adresse();
                 adr = db.Adresses.Find(adresseId);
                 if (adr != null)
-                    adr.AdresseNom = adresseNom;
+                    adr.Nom = adresseNom;
                 return db.SaveChanges();
             }
             catch (Exception)

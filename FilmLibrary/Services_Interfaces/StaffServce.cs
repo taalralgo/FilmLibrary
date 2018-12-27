@@ -31,7 +31,7 @@ namespace FilmLibrary.Services_Interfaces
         {
             try
             {
-                return db.Staffs.Where(s => s.StaffId.Equals(id)).FirstOrDefault();
+                return db.Staffs.Where(s => s.ID.Equals(id)).FirstOrDefault();
             }
             catch (Exception)
             {
@@ -58,16 +58,16 @@ namespace FilmLibrary.Services_Interfaces
             try
             {
                 Staff staff = new Staff();
-                staff.StaffAdresse = adresse;
-                staff.StaffPicture = photo;
-                staff.StoreId = store;
-                staff.StaffActive = etat;
-                staff.StaffNom = nom;
-                staff.StaffPrenom = prenom;
-                staff.StaffEmail = email;
-                staff.StaffUserName = username;
-                staff.StaffPasswd = password;
-                staff.StaffRole = role;
+                staff.Adresse = adresse;
+                staff.Picture = photo;
+                staff.Store = store;
+                staff.Active = etat;
+                staff.Nom = nom;
+                staff.Prenom = prenom;
+                staff.Email = email;
+                staff.UserName = username;
+                staff.Passwd = password;
+                staff.Role = role;
                 return db.SaveChanges();
             }
             catch (Exception)

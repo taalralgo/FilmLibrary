@@ -32,8 +32,8 @@ namespace FilmLibrary.Services_Interfaces
             try
             {
                 Language language = new Language();
-                language = db.Languages.Where(l => l.LanguageId.Equals(id)).FirstOrDefault();
-                language.LanguageName = nom;
+                language = db.Languages.Where(l => l.ID.Equals(id)).FirstOrDefault();
+                language.Name = nom;
                 return db.SaveChanges();
             }
             catch (Exception)

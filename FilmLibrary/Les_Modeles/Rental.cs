@@ -11,21 +11,21 @@ namespace FilmLibrary.Les_Modeles
     public class Rental
     {
         [DataMember]
-        public int RentalId { get; set; }
+        public int ID { get; set; }
 
         [DataMember]
-        public DateTime RentalDate { get; set; }
+        public DateTime Date { get; set; }
 
         [DataMember]
-        public DateTime RentalReturnDate { get; set; }
+        public DateTime ReturnDate { get; set; }
 
         [DataMember]
-        public Inventory InventoryId { get; set; }
+        public Inventory Inventory { get; set; }
 
         [DataMember]
-        public Customer CustomerId { get; set; }
+        public Customer Customer { get; set; }
 
         [DataMember]
-        public Staff StaffId { get; set; }
+        public Staff Staff { get; set; }
     }
 }

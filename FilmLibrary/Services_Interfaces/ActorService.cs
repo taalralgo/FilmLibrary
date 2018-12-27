@@ -52,9 +52,9 @@ namespace FilmLibrary.Services_Interfaces
             {
                 Actor tampon = new Actor();
                 tampon = db.Actors.Find(acteur_id);
-                tampon.ActeurNom = nom;
+                tampon.Nom = nom;
                 if (prenom != null)
-                    tampon.ActeurPrenom = prenom;
+                    tampon.Prenom = prenom;
 
                 return db.SaveChanges();
             }

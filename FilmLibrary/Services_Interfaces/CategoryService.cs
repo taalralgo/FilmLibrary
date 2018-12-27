@@ -31,7 +31,7 @@ namespace FilmLibrary.Services_Interfaces
         {
             try
             {
-                return db.Categories.Where(catego => catego.CategoryId.Equals(categoryId)).FirstOrDefault();
+                return db.Categories.Where(catego => catego.ID.Equals(categoryId)).FirstOrDefault();
             }
             catch (Exception)
             {
@@ -47,7 +47,7 @@ namespace FilmLibrary.Services_Interfaces
                 Category cat = new Category();
                 cat = db.Categories.Find(categoryId);
                 if(cat != null)
-                    cat.CategoryNom = categoryNom;
+                    cat.Nom = categoryNom;
                 return db.SaveChanges();
             }
             catch (Exception)

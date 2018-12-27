@@ -11,12 +11,12 @@ namespace FilmLibrary.Les_Modeles
     public class Inventory
     {
         [DataMember]
-        public int InventoryId { get; set; }
+        public int ID { get; set; }
 
         [DataMember]
-        public Film FilmId { get; set; }
+        public Film Film { get; set; }
 
         [DataMember]
-        public Store StoreId { get; set; }
+        public Store Store { get; set; }
     }
 }

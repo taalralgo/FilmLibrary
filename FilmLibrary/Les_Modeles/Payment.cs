@@ -11,22 +11,22 @@ namespace FilmLibrary.Les_Modeles
     public class Payment
     {
         [DataMember]
-        public int PaymentId { get; set; }
+        public int ID { get; set; }
 
         [DataMember]
-        public int PaymentAmount { get; set; }
+        public int Amount { get; set; }
 
         [DataMember]
-        public DateTime PaymentDate { get; set; }
+        public DateTime Date { get; set; }
 
         [DataMember]
-        public Customer CustomerId { get; set; }
+        public Customer Customer { get; set; }
 
         [DataMember]
-        public Staff StaffId { get; set; }
+        public Staff Staff { get; set; }
 
         [DataMember]
-        public Rental RentalId { get; set; }
+        public Rental Rental { get; set; }
 
     }
 }

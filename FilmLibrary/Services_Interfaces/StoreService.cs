@@ -31,7 +31,7 @@ namespace FilmLibrary.Services_Interfaces
         {
             try
             {
-                return db.Stores.Where(s => s.StoreId.Equals(id)).FirstOrDefault();
+                return db.Stores.Where(s => s.ID.Equals(id)).FirstOrDefault();
             }
             catch (Exception)
             {
@@ -53,19 +53,5 @@ namespace FilmLibrary.Services_Interfaces
             }
         }
 
-        public int Modifier(int id, Staff manager)
-        {
-            try
-            {
-                Store store = new Store();
-                store.StaffId = manager;
-                return db.SaveChanges();
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
     }
 }

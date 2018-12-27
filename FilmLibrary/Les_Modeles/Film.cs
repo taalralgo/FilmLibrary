@@ -13,34 +13,34 @@ namespace FilmLibrary.Les_Modeles
     public class Film
     {
         [DataMember]
-        public int FilmId { get; set; }
+        public int ID { get; set; }
 
         [DataMember]
         [Column(TypeName = "VARCHAR")]
         [StringLength(255)]
-        public string FilmTitle { get; set; }
+        public string Title { get; set; }
 
         [DataMember]
         [Column(TypeName = "TEXT")]
-        public string FilmDescription { get; set; }
+        public string Description { get; set; }
 
         [DataMember]
-        public DateTime FilmRelease_year { get; set; }
+        public DateTime Release_year { get; set; }
 
         [DataMember]
-        public int FilmRental_duration { get; set; }
+        public int Rental_duration { get; set; }
 
         [DataMember]
-        public int FilmRental_rate { get; set; }
+        public int Rental_rate { get; set; }
 
         [DataMember]
-        public int FilmLenght { get; set; }
+        public int Lenght { get; set; }
 
         [DataMember]
-        public int FilmRental { get; set; }
+        public int Rental { get; set; }
 
         [DataMember]
-        public Language LanguageId { get; set; }
+        public Language Language { get; set; }
 
         [DataMember]
         public ICollection<Store> Stores { get; set; }

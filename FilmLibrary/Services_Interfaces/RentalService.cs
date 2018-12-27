@@ -31,7 +31,7 @@ namespace FilmLibrary.Services_Interfaces
         {
             try
             {
-                return db.Rentals.Where(r => r.RentalId.Equals(id)).FirstOrDefault();
+                return db.Rentals.Where(r => r.ID.Equals(id)).FirstOrDefault();
             }
             catch (Exception)
             {
@@ -58,7 +58,7 @@ namespace FilmLibrary.Services_Interfaces
             try
             {
                 Rental rental = new Rental();
-                rental.RentalDate = dateRetour;
+                rental.Date = dateRetour;
                 return db.SaveChanges();
             }
             catch (Exception)

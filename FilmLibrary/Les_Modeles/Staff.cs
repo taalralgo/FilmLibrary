@@ -13,49 +13,49 @@ namespace FilmLibrary.Les_Modeles
     public class Staff
     {
         [DataMember]
-        public int StaffId { get; set; }
+        public int ID { get; set; }
 
         [DataMember]
         [Column(TypeName = "VARCHAR")]
         [StringLength(45)]
-        public string StaffPrenom { get; set; }
+        public string Prenom { get; set; }
 
         [DataMember]
         [Column(TypeName = "VARCHAR")]
         [StringLength(45)]
-        public string StaffNom { get; set; }
+        public string Nom { get; set; }
 
         [DataMember]
         [Column(TypeName = "VARCHAR")]
         [StringLength(45)]
-        public string StaffRole { get; set; }
+        public string Role { get; set; }
 
         [DataMember]
-        public byte[] StaffPicture { get; set; }
+        public byte[] Picture { get; set; }
 
         [DataMember]
         [Column(TypeName = "VARCHAR")]
         [StringLength(50)]
-        public String StaffEmail { get; set; }
+        public String Email { get; set; }
 
         [DataMember]
-        public bool StaffActive { get; set; }
+        public bool Active { get; set; }
 
         [DataMember]
         [Column(TypeName = "VARCHAR")]
         [StringLength(16)]
-        public String StaffUserName { get; set; }
+        public String UserName { get; set; }
 
         [DataMember]
         [Column(TypeName = "VARCHAR")]
         [StringLength(40)]
-        public String StaffPasswd { get; set; }
+        public String Passwd { get; set; }
 
         [DataMember]
-        public Adresse StaffAdresse { get; set; }
+        public Adresse Adresse { get; set; }
 
         [DataMember]
-        public Store StoreId { get; set; }
+        public Store Store { get; set; }
 
         [DataMember]
         public ICollection<Payment> Payments { get; set; }

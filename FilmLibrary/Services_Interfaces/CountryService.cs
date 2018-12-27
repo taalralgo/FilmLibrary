@@ -43,9 +43,9 @@ namespace FilmLibrary.Services_Interfaces
         public int Modifier(int countryId, string countryNom)
         {
             Country count = new Country();
-            count = db.Countries.Where(country => country.CountryId.Equals(countryId)).FirstOrDefault();
+            count = db.Countries.Where(country => country.ID.Equals(countryId)).FirstOrDefault();
             if (count != null)
-                count.CountryNom = countryNom;
+                count.Nom = countryNom;
             return db.SaveChanges();
 
         }

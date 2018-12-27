@@ -31,7 +31,7 @@ namespace FilmLibrary.Services_Interfaces
         {
             try
             {
-                return db.Payments.Where(p => p.PaymentId.Equals(id)).FirstOrDefault();
+                return db.Payments.Where(p => p.ID.Equals(id)).FirstOrDefault();
             }
             catch (Exception)
             {
@@ -58,8 +58,8 @@ namespace FilmLibrary.Services_Interfaces
             try
             {
                 Payment payment = new Payment();
-                payment.PaymentAmount = montant;
-                payment.CustomerId = customer;
+                payment.Amount = montant;
+                payment.Customer = customer;
                 return db.SaveChanges();
             }
             catch (Exception)

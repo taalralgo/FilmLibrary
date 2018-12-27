@@ -31,7 +31,7 @@ namespace FilmLibrary.Services_Interfaces
         {
             try
             {
-                return db.Cities.Where(city => city.CityId.Equals(cityId)).FirstOrDefault();
+                return db.Cities.Where(city => city.ID.Equals(cityId)).FirstOrDefault();
             }
             catch (Exception)
             {
@@ -60,7 +60,7 @@ namespace FilmLibrary.Services_Interfaces
                 City city = new City();
                 city = db.Cities.Find(cityId);
                 if(city != null)
-                    city.CityNom = cityNom;
+                    city.Nom = cityNom;
                 return db.SaveChanges();
             }
             catch (Exception)

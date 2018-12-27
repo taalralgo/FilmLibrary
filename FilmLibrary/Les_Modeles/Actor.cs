@@ -19,12 +19,12 @@ namespace FilmLibrary.Les_Modeles
         [DataMember]
         [Column(TypeName = "VARCHAR")]
         [StringLength(15)]
-        public string ActeurNom { get; set; }
+        public string Nom { get; set; }
 
         [DataMember]
         [Column(TypeName = "VARCHAR")]
         [StringLength(15)]
-        public String ActeurPrenom { get; set; }
+        public String Prenom { get; set; }
 
         [DataMember]
         public ICollection<Film> Films { get; set; }

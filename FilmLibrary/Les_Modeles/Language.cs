@@ -13,12 +13,12 @@ namespace FilmLibrary.Les_Modeles
     public class Language
     {
         [DataMember]
-        public int LanguageId { get; set; }
+        public int ID { get; set; }
 
         [DataMember]
         [Column(TypeName = "VARCHAR")]
         [StringLength(20)]
-        public string LanguageName { get; set; }
+        public string Name { get; set; }
 
         [DataMember]
         public ICollection<Film> Films { get; set; }

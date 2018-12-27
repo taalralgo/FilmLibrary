@@ -31,7 +31,7 @@ namespace FilmLibrary.Services_Interfaces
         {
             try
             {
-                return db.Inventories.Where(i => i.InventoryId.Equals(id)).FirstOrDefault();
+                return db.Inventories.Where(i => i.ID.Equals(id)).FirstOrDefault();
             }
             catch (Exception)
             {
@@ -44,7 +44,7 @@ namespace FilmLibrary.Services_Interfaces
         {
             try
             {
-                return db.Inventories.Where(i => i.FilmId.Equals(film.FilmId)).ToList();
+                return db.Inventories.Where(i => i.Film.Equals(film)).ToList();
             }
             catch (Exception)
             {
@@ -57,7 +57,7 @@ namespace FilmLibrary.Services_Interfaces
         {
             try
             {
-                return db.Inventories.Where(s => s.StoreId.Equals(store.StoreId)).ToList();
+                return db.Inventories.Where(s => s.Store.Equals(store.Store)).ToList();
             }
             catch (Exception)
             {

@@ -25,6 +25,7 @@ namespace FilmLibrary.Services_Interfaces
         List<Actor> FindAll();
 
         //TROUVER UN ACTEUR PAR ID
+        [OperationContract]
         Actor Find(int acteurId);
 
     

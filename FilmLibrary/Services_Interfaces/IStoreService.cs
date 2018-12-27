@@ -20,8 +20,5 @@ namespace FilmLibrary.Services_Interfaces
 
         [OperationContract]
         Store Find(int id);
-
-        [OperationContract]
-        int Modifier(int id, Staff manager);
     }
 }

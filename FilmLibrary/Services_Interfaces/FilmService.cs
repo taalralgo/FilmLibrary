@@ -31,7 +31,7 @@ namespace FilmLibrary.Services_Interfaces
         {
             try
             {
-                return db.Films.Where(film => film.FilmId.Equals(id)).FirstOrDefault();
+                return db.Films.Where(film => film.ID.Equals(id)).FirstOrDefault();
             }
             catch (Exception)
             {
@@ -58,17 +58,17 @@ namespace FilmLibrary.Services_Interfaces
             try
             {
                 Film film = new Film();
-                film = db.Films.Where(f => f.FilmId.Equals(id)).FirstOrDefault();
+                film = db.Films.Where(f => f.ID.Equals(id)).FirstOrDefault();
                 if (film != null)
                 {
-                    film.FilmRelease_year = release_year;
-                    film.FilmLenght = length;
+                    film.Release_year = release_year;
+                    film.Lenght = length;
                     if (titre != null)
-                        film.FilmTitle = titre;
+                        film.Title = titre;
                     if (description != null)
-                        film.FilmDescription = titre;
+                        film.Description = titre;
                     if (language != null)
-                        film.LanguageId = language;
+                        film.Language = language;
                 }
                 return db.SaveChanges();
             }

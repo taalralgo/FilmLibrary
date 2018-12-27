@@ -13,14 +13,14 @@ namespace FilmLibrary.Les_Modeles
     public class City
     {
         [DataMember]
-        public int CityId { get; set; }
+        public int ID { get; set; }
 
         [DataMember]
         [Column(TypeName = "VARCHAR")]
         [StringLength(50)]
-        public String CityNom { get; set; }
+        public String Nom { get; set; }
 
         [DataMember]
-        public Country CountryId { get; set; }
+        public Country Country { get; set; }
     }
 }

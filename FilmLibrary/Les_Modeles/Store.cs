@@ -11,13 +11,10 @@ namespace FilmLibrary.Les_Modeles
     public class Store
     {
         [DataMember]
-        public int StoreId { get; set; }
+        public int ID { get; set; }
 
         [DataMember]
-        public Staff StaffId { get; set; }
-
-        [DataMember]
-        public Adresse AdresseId { get; set; }
+        public Adresse Adresse { get; set; }
 
         [DataMember]
         public ICollection<Film> Films { get; set; }

@@ -31,7 +31,7 @@ namespace FilmLibrary.Services_Interfaces
         {
             try
             {
-                return db.Customers.Where(client => client.CustomerId.Equals(client)).FirstOrDefault();
+                return db.Customers.Where(client => client.ID.Equals(client)).FirstOrDefault();
             }
             catch (Exception)
             {
@@ -58,18 +58,18 @@ namespace FilmLibrary.Services_Interfaces
             try
             {
                 Customer client = new Customer();
-                client = db.Customers.Where(c => c.CustomerId.Equals(id)).FirstOrDefault();
+                client = db.Customers.Where(c => c.ID.Equals(id)).FirstOrDefault();
                 if (client != null)
                 {
-                    client.CustomerActive = active;
+                    client.Active = active;
                     if (nom != null)
-                        client.CustomerNom = nom;
+                        client.Nom = nom;
                     if (prenom != null)
-                        client.CustomerPrenom = prenom;
+                        client.Prenom = prenom;
                     if (email != null)
-                        client.CustomerEmail = email;
+                        client.Email = email;
                     if (photo != null)
-                        client.CustomerPicture = photo;
+                        client.Picture = photo;
                 }
                 return db.SaveChanges();
             }

@@ -13,12 +13,12 @@ namespace FilmLibrary.Les_Modeles
     public class Category
     {
         [DataMember]
-        public int CategoryId { get; set; }
+        public int ID { get; set; }
 
         [DataMember]
         [Column(TypeName = "VARCHAR")]
         [StringLength(25)]
-        public String CategoryNom { get; set; }
+        public String Nom { get; set; }
 
         [DataMember]
         public ICollection<Film> Films { get; set; }

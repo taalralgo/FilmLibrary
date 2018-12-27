@@ -13,12 +13,12 @@ namespace FilmLibrary.Les_Modeles
     public class Adresse
     {
         [DataMember]
-        public int AdresseId { get; set; }
+        public int ID{ get; set; }
 
         [DataMember]
         [Column(TypeName = "VARCHAR")]
         [StringLength(50)]
-        public String AdresseNom { get; set; }
+        public String Nom { get; set; }
 
         [DataMember]
         [Column(TypeName = "VARCHAR")]
@@ -31,7 +31,7 @@ namespace FilmLibrary.Les_Modeles
         public String District { get; set; }
 
         [DataMember]
-        public City CityId { get; set; }
+        public City City { get; set; }
 
         [DataMember]
         public ICollection<Store> Stores { get; set; }
