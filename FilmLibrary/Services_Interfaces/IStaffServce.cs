@@ -22,6 +22,9 @@ namespace FilmLibrary.Services_Interfaces
         Staff Find(int id);
 
         [OperationContract]
+        Staff FindUser(string username);
+
+        [OperationContract]
         int Modifier(int id, Adresse adresse,byte[] photo, Store store, bool etat, string nom, string prenom, string email, string username, string password, string role);
         
     }

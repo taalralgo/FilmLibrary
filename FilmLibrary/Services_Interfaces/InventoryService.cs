@@ -57,7 +57,7 @@ namespace FilmLibrary.Services_Interfaces
         {
             try
             {
-                return db.Inventories.Where(s => s.Store.Equals(store.Store)).ToList();
+                return db.Inventories.Where(s => s.Store.Equals(store)).ToList();
             }
             catch (Exception)
             {

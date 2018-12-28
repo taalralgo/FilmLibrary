@@ -53,6 +53,19 @@ namespace FilmLibrary.Services_Interfaces
             }
         }
 
+        public Staff FindUser(string username)
+        {
+            try
+            {
+                return db.Staffs.Where(s => s.UserName.Equals(username)).FirstOrDefault();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public int Modifier(int id, Adresse adresse, byte[] photo, Store store, bool etat, string nom, string prenom, string email, string username, string password, string role)
         {
             try
