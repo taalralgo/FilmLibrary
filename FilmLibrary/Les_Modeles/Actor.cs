@@ -13,7 +13,6 @@ namespace FilmLibrary.Les_Modeles
     public class Actor
     {
         [DataMember]
-        
         public int ID { get; set; }
 
         [DataMember]

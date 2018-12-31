@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -20,11 +21,20 @@ namespace FilmLibrary.Les_Modeles
         public DateTime ReturnDate { get; set; }
 
         [DataMember]
+        [ForeignKey("Inventory")]
+        public int InventoryID { get; set; }
+        [DataMember]
         public Inventory Inventory { get; set; }
 
         [DataMember]
+        [ForeignKey("Customer")]
+        public int CustomerID { get; set; }
+        [DataMember]
         public Customer Customer { get; set; }
 
+        [DataMember]
+        [ForeignKey("Staff")]
+        public int StaffID { get; set; }
         [DataMember]
         public Staff Staff { get; set; }
     }

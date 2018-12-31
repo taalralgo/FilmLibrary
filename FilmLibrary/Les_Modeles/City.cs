@@ -21,6 +21,9 @@ namespace FilmLibrary.Les_Modeles
         public String Nom { get; set; }
 
         [DataMember]
+        [ForeignKey("Country")]
+        public int CountryID { get; set; }
+        [DataMember]
         public Country Country { get; set; }
     }
 }

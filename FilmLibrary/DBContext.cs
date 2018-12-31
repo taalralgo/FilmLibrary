@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,6 +47,11 @@ namespace FilmLibrary
         public DBContext() : base("name=FilmLibrary")
         {
             Database.SetInitializer<DBContext>(new DropCreateDatabaseIfModelChanges<DBContext>());
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
         }
 
     }

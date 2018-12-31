@@ -22,6 +22,9 @@ namespace FilmLibrary.Services_Interfaces
         Adresse Find(int adresseId);
 
         [OperationContract]
+        Adresse FindByNom(string name);
+
+        [OperationContract]
         int Modifier(int AdresseId, string adresseNom);
 
 

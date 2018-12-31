@@ -40,6 +40,9 @@ namespace FilmLibrary.Les_Modeles
         public int Rental { get; set; }
 
         [DataMember]
+        [ForeignKey("Language")]
+        public int LanguageID { get; set; }
+        [DataMember]
         public Language Language { get; set; }
 
         [DataMember]

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -13,6 +14,9 @@ namespace FilmLibrary.Les_Modeles
         [DataMember]
         public int ID { get; set; }
 
+        [DataMember]
+        [ForeignKey("Adresse")]
+        public int AdresseID { get; set; }
         [DataMember]
         public Adresse Adresse { get; set; }
 

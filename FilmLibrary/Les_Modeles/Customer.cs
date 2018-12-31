@@ -37,8 +37,14 @@ namespace FilmLibrary.Les_Modeles
         public bool Active { get; set; }
 
         [DataMember]
+        [ForeignKey("Store")]
+        public int StoreID { get; set; }
+        [DataMember]
         public Store Store { get; set; }
 
+        [DataMember]
+        [ForeignKey("Adresse")]
+        public int AdresseID { get; set; }
         [DataMember]
         public Adresse Adresse { get; set; }
 

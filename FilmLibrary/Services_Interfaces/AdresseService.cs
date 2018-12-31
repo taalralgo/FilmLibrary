@@ -45,6 +45,19 @@ namespace FilmLibrary.Services_Interfaces
             }
         }
 
+        public Adresse FindByNom(string name)
+        {
+            try
+            {
+                return db.Adresses.Where(a => a.Nom.Equals(name)).FirstOrDefault();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public int Modifier(int adresseId, string adresseNom)
         {
             try

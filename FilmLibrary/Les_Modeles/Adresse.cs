@@ -13,7 +13,7 @@ namespace FilmLibrary.Les_Modeles
     public class Adresse
     {
         [DataMember]
-        public int ID{ get; set; }
+        public int ID { get; set; }
 
         [DataMember]
         [Column(TypeName = "VARCHAR")]
@@ -30,6 +30,9 @@ namespace FilmLibrary.Les_Modeles
         [StringLength(20)]
         public String District { get; set; }
 
+        [DataMember]
+        [ForeignKey("City")]
+        public int CityID { get; set; }
         [DataMember]
         public City City { get; set; }
 
