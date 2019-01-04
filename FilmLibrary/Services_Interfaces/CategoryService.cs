@@ -27,11 +27,11 @@ namespace FilmLibrary.Services_Interfaces
             return categorie;
         }
 
-        public Category Find(int categoryId)
+        public Category Find(string nom)
         {
             try
             {
-                return db.Categories.Where(catego => catego.ID.Equals(categoryId)).FirstOrDefault();
+                return db.Categories.Where(catego => catego.Nom.Equals(nom)).FirstOrDefault();
             }
             catch (Exception)
             {
@@ -40,14 +40,40 @@ namespace FilmLibrary.Services_Interfaces
             }
         }
 
-        public int Modifier(int categoryId, string categoryNom)
+        public List<Category> FindAll()
+        {
+            try
+            {
+                return db.Categories.ToList();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public Category FindByName(string name)
+        {
+            try
+            {
+                return db.Categories.Where(catego => catego.Nom.ToLower().Equals(name.ToLower())).FirstOrDefault();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public int Modifier(string Aciennom, string NouveauNom)
         {
             try
             {
                 Category cat = new Category();
-                cat = db.Categories.Find(categoryId);
+                cat = Find(Aciennom);
                 if(cat != null)
-                    cat.Nom = categoryNom;
+                    cat.Nom = NouveauNom.ToUpper();
                 return db.SaveChanges();
             }
             catch (Exception)

@@ -27,6 +27,18 @@ namespace FilmLibrary.Services_Interfaces
             return language;
         }
 
+        public List<Language> FindAll()
+        {
+            try
+            {
+                return db.Languages.ToList();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public int Modifier(int id, string nom)
         {
             try

@@ -16,10 +16,16 @@ namespace FilmLibrary.Services_Interfaces
         Category Add(Category categorie);
 
         [OperationContract]
-        Category Find(int categoryId);
+        Category Find(string nom);
 
         [OperationContract]
-        int Modifier(int categoryId, string CategoryNom);
+        Category FindByName(string name);
+
+        [OperationContract]
+        List<Category> FindAll();
+
+        [OperationContract]
+        int Modifier(string Aciennom, string NouveauNom);
 
     }
 }

@@ -16,6 +16,8 @@ namespace FilmLibrary.Services_Interfaces
         {
             try
             {
+                BasicHttpBinding binding = new BasicHttpBinding();
+                binding.MaxReceivedMessageSize = 2147483647;
                 db.Staffs.Add(staff);
                 db.SaveChanges();
             }

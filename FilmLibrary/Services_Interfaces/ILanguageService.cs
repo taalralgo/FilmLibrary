@@ -16,6 +16,9 @@ namespace FilmLibrary.Services_Interfaces
         Language Add(Language language);
 
         [OperationContract]
+        List<Language> FindAll();
+
+        [OperationContract]
         int Modifier(int id, string nom);
     }
 }

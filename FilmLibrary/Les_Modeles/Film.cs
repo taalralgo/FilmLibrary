@@ -28,6 +28,19 @@ namespace FilmLibrary.Les_Modeles
         public DateTime Release_year { get; set; }
 
         [DataMember]
+        [Column(TypeName = "VARCHAR")]
+        [StringLength(255)]
+        public string Special_features { get; set; }
+
+        [DataMember]
+        [Column(TypeName = "VARCHAR")]
+        [StringLength(10)]
+        public string Rating { get; set; }
+
+        [DataMember]
+        public int Remplacement_cost { get; set; }
+
+        [DataMember]
         public int Rental_duration { get; set; }
 
         [DataMember]
@@ -37,13 +50,20 @@ namespace FilmLibrary.Les_Modeles
         public int Lenght { get; set; }
 
         [DataMember]
-        public int Rental { get; set; }
-
-        [DataMember]
+        [Display(Name = "Name")]
         [ForeignKey("Language")]
         public int LanguageID { get; set; }
         [DataMember]
         public Language Language { get; set; }
+
+        [DataMember]
+        [Display(Name = "Name")]
+        [ForeignKey("Language_origine")]
+        public int Languag_origineID { get; set; }
+        [DataMember]
+        public Language Language_origine { get; set; }
+
+
 
         [DataMember]
         public ICollection<Store> Stores { get; set; }

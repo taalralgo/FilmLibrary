@@ -40,22 +40,33 @@ namespace FilmLibrary.Services_Interfaces
             }
         }
 
+        public Actor FindByName(string nom,string prenom)
+        {
+            try
+            {
+                return db.Actors.Where(acteur => acteur.Nom.ToLower().Equals(nom.ToLower()) && acteur.Prenom.ToLower().Equals(prenom.ToLower())).FirstOrDefault();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public List<Actor> FindAll()
         {
             //return db.Actors.Select(acteur => new { Id = acteur.ActeurId, Nom = acteur.ActeurNom, Prénom = acteur.ActeurPrenom }).ToList();
             return db.Actors.ToList();
         }
 
-        public int Modifier(int acteur_id,string nom,string prenom = null)
+        public int Modifier(string anciennom, string ancienprenom, string nouveaunom, string nouveauprenom)
         {
             try
             {
                 Actor tampon = new Actor();
-                tampon = db.Actors.Find(acteur_id);
-                tampon.Nom = nom;
-                if (prenom != null)
-                    tampon.Prenom = prenom;
-
+                tampon = FindByName(anciennom, ancienprenom);
+                tampon.Nom = nouveaunom.ToUpper();
+                tampon.Prenom = nouveauprenom;
                 return db.SaveChanges();
             }
             catch (Exception)

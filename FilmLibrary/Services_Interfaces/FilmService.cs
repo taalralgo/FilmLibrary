@@ -53,23 +53,27 @@ namespace FilmLibrary.Services_Interfaces
             }
         }
 
-        public int Modifier(int id, DateTime release_year, int length, string titre = null, string description = null, Language language = null)
+        public Film FindByTitle(string nom)
         {
             try
             {
-                Film film = new Film();
-                film = db.Films.Where(f => f.ID.Equals(id)).FirstOrDefault();
-                if (film != null)
-                {
-                    film.Release_year = release_year;
-                    film.Lenght = length;
-                    if (titre != null)
-                        film.Title = titre;
-                    if (description != null)
-                        film.Description = titre;
-                    if (language != null)
-                        film.Language = language;
-                }
+                return db.Films.Where(film => film.Title.Equals(nom)).FirstOrDefault();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public int Modifier(int id, Film film)
+        {
+            try
+            {
+                Film tp = new Film();
+                tp = db.Films.Where(f => f.ID.Equals(id)).FirstOrDefault();
+                if (tp != null)
+                    tp = film;
                 return db.SaveChanges();
             }
             catch (Exception)

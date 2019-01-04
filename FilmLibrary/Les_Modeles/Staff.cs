@@ -54,6 +54,7 @@ namespace FilmLibrary.Les_Modeles
         [DataMember]
 
         [ForeignKey("Adresse")]
+        [Display(Name ="Nom")]
         public int AdresseID { get; set; }
         [DataMember]
         public Adresse Adresse { get; set; }

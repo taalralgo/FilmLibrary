@@ -16,12 +16,15 @@ namespace FilmLibrary.Services_Interfaces
         Film Add(Film film);
 
         [OperationContract]
-        int Modifier(int id, DateTime release_year, int length, string titre = null, string description = null, Language language = null);
+        int Modifier(int id, Film film);
 
         [OperationContract]
         List<Film> FindAll();
 
         [OperationContract]
         Film Find(int id);
+
+        [OperationContract]
+        Film FindByTitle(string nom);
     }
 }

@@ -18,7 +18,7 @@ namespace FilmLibrary.Services_Interfaces
 
         //MODIFIER UN ACTEUR
         [OperationContract]
-        int Modifier(int acteur_id, string nom, string prenom = null);
+        int Modifier(string anciennom, string ancienprenom,string nouveaunom, string nouveauprenom);
 
         //RETOURNER TOUS LES ACTEURS SANS EXCEPTION SOUS FORME DE LISTE
         [OperationContract]
@@ -28,7 +28,10 @@ namespace FilmLibrary.Services_Interfaces
         [OperationContract]
         Actor Find(int acteurId);
 
-    
+        [OperationContract]
+        Actor FindByName(string nom, string prenom);
+
+
 
     }
 }
